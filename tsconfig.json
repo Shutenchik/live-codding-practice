@@ -1,4 +1,19 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "types": ["@nuxt/image", "@nuxt/types"],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "~/*": ["./*"],
+      "#app/*": ["./.nuxt/app/*"]
+    },
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", ".output", "dist", "cypress"]
 }
