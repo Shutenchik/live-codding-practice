@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import countries from "@/algoritms/trie/constants";
 
-const { autoComplete } = useTree(countries);
 const country = ref("");
+const { autoComplete, clearFieldIsEnd } = useTree(countries, country);
 
 const sortedCountry = computed(() =>
   country.value === "" ? countries : autoComplete(country.value)
@@ -16,7 +16,12 @@ const handleClick = (item: string) => {
 <template>
   <div class="field">
     <label for="countries">Countries</label>
-    <input v-model="country" placeholder="Enter country name" name="countries" />
+    <input
+      v-model="country"
+      placeholder="Enter country name"
+      name="countries"
+      @focus="clearFieldIsEnd(country)"
+    />
   </div>
 
   <div class="countries">

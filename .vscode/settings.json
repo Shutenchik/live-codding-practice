@@ -1,0 +1,11 @@
+{
+  "testing.automaticallyOpenPeekView": "failureInVisibleDocument",
+  "testing.alwaysRevealTestOnStateChange": true,
+  "github.copilot.chat.codeGeneration.instructions": [],
+  "emmet.preferences": {},
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.branchValidationRegex": "feature, fix, hotfix, release, bugfix",
+  "git.confirmSync": false,
+  "notebook.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "less.format.enable": false
+}

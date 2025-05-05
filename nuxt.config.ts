@@ -20,10 +20,7 @@ export default defineNuxtConfig({
   },
   vite: {
     server: {
-      hmr: {
-        port: 3000,
-        clientPort: 3000,
-      },
+      hmr: true,
     },
     css: {
       preprocessorOptions: {
