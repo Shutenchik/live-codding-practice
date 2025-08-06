@@ -1,0 +1,262 @@
+In Axios, interceptors allow us to modify requests or responses globally 
+— which is useful for adding headers, handling errors, 
+refreshing tokens, and logging.
+
+There are two types: request and response interceptors.
+
+We usually manage interceptors in a centralized Axios instance,
+so we can keep the logic consistent and reusable across the app.
+
+1. Request Interceptor — to attach authorization tokens:
+axiosInstance.interceptors.request.use
+
+2. Response Interceptor — for global error handling:
+axiosInstance.interceptors.response.use
+
+It’s also important to eject interceptors if needed — for example, 
+in tests or if an instance is reused in multiple environments.
+
+Overall, interceptors help enforce app-wide rules and reduce repetitive 
+logic in every API call.
+
+
+Composables in Vue 3 are reusable functions that help organize 
+and share logic across components when using the Composition API.
+
+Instead of repeating code in multiple components, 
+we can extract common logic — like fetching data, 
+handling forms, or managing timers — into a composable function.
+
+A composable is just a regular function 
+that usually starts with use, like useUser or useCart, 
+and it returns reactive state, computed values, or methods.
+
+For example, I often create a useVerification composable that handles status,
+timers, and logic for onboarding flows — so it stays clean,
+testable, and easy to reuse in multiple views.
+
+Composables improve readability, testability, 
+and help us build more modular architecture in Vue 3 projects.
+
+
+
+The biggest difference between Vue 2 and Vue 3 
+is the introduction of the Composition API, 
+which gives developers more flexibility 
+and better code organization — especially 
+for complex components and reusability.
+
+Vue 3 also brings major improvements in performance, 
+due to a faster Virtual DOM and better tree-shaking support.
+
+Under the hood, Vue 3 was rewritten in TypeScript, 
+which improves type safety and editor support.
+
+And finally, Vue 3 improves support for Teleport and Suspense, 
+which makes advanced use cases easier to implement out of the box.
+
+
+
+
+the SOLID acronym stands for 5 core principles 
+of object-oriented programming (OOP) that help you write clean,
+ maintainable, and scalable code:
+ S — Single Responsibility Principle (SRP)
+Each class should have only one reason to change.
+
+✅ Good:
+A UserService handles user logic, and a separate EmailService sends emails.
+
+O — Open/Closed Principle (OCP)
+Software entities should be open for extension,
+ but closed for modification.
+
+✅ Good:
+Using interfaces or abstract classes allows you to add new 
+behaviors without changing existing code. For example,
+ a PaymentProcessor interface lets you plug in 
+ StripePayment, PayPalPayment, etc.
+
+🔹 L — Liskov Substitution Principle (LSP)
+Subtypes must be substitutable for their base types.
+
+✅ Good:
+If Bird is a class, and Duck extends Bird, 
+then Duck should behave correctly wherever a Bird is expected.
+
+
+🔹 I — Interface Segregation Principle (ISP)
+Clients shouldn’t be forced to depend on interfaces they don’t use.
+
+✅ Good:
+Split large interfaces into smaller ones. E.g., 
+IPrinter, IScanner, IFax instead of one bloated IMachine interface.
+
+🔹 D — Dependency Inversion Principle (DIP)
+Depend on abstractions, not on concrete implementations.
+
+✅ Good:
+Use interfaces or abstract classes. 
+A UserController should depend on a UserRepositoryInterface, 
+not a specific database implementation.
+
+OOP is based on objects with state and behavior.
+Functional programming is based on pure functions 
+and avoids state mutation. 
+OOP focuses on 'how things behave',
+ FP on 'what to do'. 
+Both can be combined depending on the use case.
+
+1. Tell us about yourself and your experience in frontend development.
+
+Hi! My name is Natali, and I’ve been working in IT 
+for over 7 years as a frontend developer.
+I started with HTML and CSS, and over time 
+I grew into a team lead role.
+But to be honest,
+ I enjoy coding way more than managing.
+
+I’ve worked in several domains — from fintech to iGaming.
+For example, I helped develop a loyalty program for bank clients, 
+integrating with services like Expedia, Rentalcars, and Kiwi.
+I also have experience with iGaming platforms, 
+for Ukrainian and U.S. markets.
+I’ve worked in outsourcing, product teams, and startups — 
+so I’m pretty adaptable when it comes to processes and culture.
+My core stack is TypeScript, Vue 3, and Nuxt 3.
+I enjoy working with people, and I value clear communication
+ and a good sense of humor. 
+ And I’m always excited about 
+ new challenges and learning opportunities.
+
+
+2. Why are you interested in this position and DigitalSuits?
+This position caught my attention because of the project’s mission —
+I’ve personally faced this kind of customer experience 
+and would love to contribute to solving that problem.
+
+Also, the tech stack is close to mine, 
+and I’m confident that my experience can bring value 
+and strengthen the project.
+
+I checked your company reviews on DOU and was impressed —
+it's rare to see so much consistently 
+positive feedback from employees.
+
+
+3. What technologies do you feel most confident with, and what do you enjoy building the most?
+I feel most confident working with TypeScript, Vue and Nuxt, 
+especially Vue Composition API and Nuxt 3. 
+I also have experience with Quasar and I enjoy building scalable, 
+maintainable applications where performance matters.
+What really inspires me is building products that bring real value — 
+not only by implementing features, 
+but by improving the whole user journey. For me, frontend is more than just visuals;
+ it’s about how intuitive and satisfying the experience is.
+I like working on products where I can influence both
+the technical side and the UX and solving real problems for real users.
+
+
+4. Describe a challenge or difficult situation in your previous project and how you handled it.
+I was assigned to develop a new payment flow, 
+including integration of a new payment provider 
+and user verification service.
+
+The challenge was that this feature wasn’t meant for just one product — 
+it had to work across a shared platform 
+used by three different projects, 
+each with its funnel logic and specific requirements.
+To avoid duplicating the logic, 
+I proposed and implemented a platform-level solution: 
+the core functionality was abstracted into a shared module, 
+and each project could override the necessary steps and UI as needed.
+This allowed for flexible customization 
+while keeping a unified, maintainable codebase.
+I also implemented a new user verification system 
+with multiple response types depending on the 
+provider — this helped streamline the funnel 
+and made the flow more transparent for the end user.
+
+
+
+5. What kind of team or project are you looking for right now?
+I’m looking for a stable project with long-term potential 
+and room for growth.
+For me, team dynamics matter a lot — open, 
+respectful collaboration makes a big difference 
+and contributes directly to the product’s success.
+I also value companies that follow through on commitments,
+pay salaries on time, and build honest, reliable work relationships.
+
+6. What are you looking for in your next role?
+What I’m looking for in my next role is a strong product 
+with a clear vision, 
+a professional team where I can collaborate and grow.
+I’d love to work on a product that has real users and real impact — 
+where my work can directly improve the user experience 
+or business results.
+I’m also looking for a team that communicates openly, 
+respects each other’s input, and works as one unit.
+And lastly, I want to keep growing as an engineer, 
+so I’m looking for a place where I’ll be challenged technically,
+but also supported when needed.
+
+
+7. How do you handle tight deadlines or high-pressure situations?
+I stay calm and focused under pressure. 
+When facing tight deadlines or a production bug, 
+I prioritize tasks, assess the impact, 
+and communicate clearly with the team. 
+I believe in solving problems methodically — no panic, 
+just clear steps and collaboration to fix the issue quickly.
+
+
+8. Describe a time when you had a conflict in a team. 
+How did you handle it?
+There was a misunderstanding with a teammate regarding task priorities. 
+Instead of letting it build up, I suggested a quick sync.
+We walked through the backlog together, 
+clarified product expectations,
+and agreed to maintain more transparent communication going forward.
+In the end, it helped us build stronger collaboration and trust.
+
+9. What is your biggest strength and your biggest weakness?
+My biggest strength is being highly responsible and result-oriented.
+ I always follow through and think beyond just writing code, 
+ I care about the product’s impact.
+As for my weakness, sometimes I take on too much. 
+But I’ve learned to better assess my workload, 
+prioritize tasks, and share responsibilities with the team.
+
+10.Tell me about a time you had to deliver disappointing news
+
+On one of my projects, we discovered a critical issue 
+with a new payment integration just before the release. 
+The fix required changes on the provider’s side, 
+which meant we couldn’t meet the planned deadline. 
+I had to communicate this to the product manager and stakeholders.
+Instead of just saying “it’s delayed,” I explained the cause,
+ the steps we had already taken,
+ and provided a realistic timeline with a backup plan.
+It wasn’t pleasant news, but being transparent
+ and solution-oriented helped the team adjust priorities without panic.
+
+
+11. Tell me about a time you had to explain something complex
+
+Before leaving one of my previous company, 
+I had to transfer knowledge about the payment system, 
+which I had built and maintained. 
+I was one of the few people who fully understood all its workflows 
+and platform-specific logic across several projects.
+I created detailed documentation explaining the payment system workflow, 
+the sequence of steps, and the unique customizations for each project.
+I also held a knowledge-sharing session with the team, 
+making sure everyone understood not just “how” it works, 
+but “why” it was built this way. 
+This made the transition smooth and prevented future knowledge gaps.
+
+12. Tell us something that is not on your Resume
+I love skiing so much.
+Outside of work I spending time with my pets — I have two cats 
+who always try to “help” when I code.
